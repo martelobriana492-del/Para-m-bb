@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Para Bladimir 💜</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7efff;color:#583875;font-family:Georgia,serif;text-align:center}button{border:0;border-radius:24px;padding:13px 20px;background:#9365bd;color:white;font-size:16px} .hidden{display:none!important}h1,h2,h3{color:#8051a9}
+#pinScreen{min-height:100vh;display:grid;place-items:center;padding:20px}.phone{background:white;border:2px solid #dfc9f2;border-radius:28px;padding:28px 20px;width:min(100%,360px)}.heart{font-size:55px}input{width:100%;padding:14px;margin:15px 0;border:2px solid #d9bdec;border-radius:14px;text-align:center;font-size:20px;letter-spacing:5px}
+#main{padding:22px 10px 45px;max-width:850px;margin:auto}.gift-scene{height:230px;display:grid;place-items:center;margin:15px auto}.gift{width:190px;height:145px;position:relative;cursor:pointer;transition:.5s}.gift-base{position:absolute;bottom:0;width:190px;height:115px;background:#a982d0;border:3px solid #754a9c;border-radius:8px}.gift-ribbon{position:absolute;left:80px;bottom:0;width:30px;height:115px;background:#f3b9d7;z-index:2}.gift-lid{position:absolute;top:10px;left:-9px;width:208px;height:40px;background:#d8c0f1;border:3px solid #754a9c;border-radius:8px;z-index:3;transition:.8s}.gift-lid:after{content:"🎀";position:absolute;top:-34px;left:75px;font-size:40px}.gift.open .gift-lid{transform:translate(35px,-100px) rotate(17deg)}
+#explosion{margin:22px auto;max-width:680px}.cross{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:140px 185px 140px;gap:6px;max-width:650px;margin:auto}.flap,.center{background:linear-gradient(145deg,#fff,#eadcf8);border:2px solid #c9a9e6;border-radius:12px;padding:8px 5px;display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:0}.flap h3{font-size:14px;margin:3px}.flap p{font-size:12px;line-height:1.35;margin:4px}.top{grid-column:2;grid-row:1}.left{grid-column:1;grid-row:2}.center{grid-column:2;grid-row:2;background:#e8d7f8;border-radius:50%}.right{grid-column:3;grid-row:2}.bottom{grid-column:2;grid-row:3}.big-heart{font-size:42px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;width:100%;font:10px Arial}.calendar span{padding:3px 0}.mark{background:#a879d0;color:white;border-radius:6px}.coupon{border:2px dashed #b38bd0;padding:8px;background:#fffaff}.counter{font: bold 11px Arial;line-height:1.5}.letter-paper{background:#fff6e4;border:2px solid #dfc79c;border-radius:12px;padding:18px;text-align:left;color:#654d42;font-family:cursive;font-size:16px;line-height:1.6;white-space:pre-line;max-width:650px;margin:auto}.small{font-size:12px;color:#9875b4}
+@media(max-width:420px){.cross{grid-template-rows:130px 175px 130px;gap:4px}.flap h3{font-size:12px}.flap p{font-size:10px}.calendar{font-size:9px}}
+</style></head><body>
+<section id="pinScreen"><div class="phone"><div class="heart">💜</div><h1>Para mi niño lindo</h1><p>Tengo una sorpresa preparada para ti.</p><p>Introduce nuestra fecha especial.</p><input id="pin" type="password" inputmode="numeric" maxlength="8" placeholder="••••••••"><button onclick="enter()">Abrir mi regalo 💌</button><p id="error" class="small"></p></div></section>
+<main id="main" class="hidden"><h1>Feliz primer mes, mi amor 💜</h1><p>Una sorpresa hecha con todo mi corazón.</p><h2>🎁 Nuestra caja explosiva</h2><p>Toca la caja para descubrir lo que preparé.</p>
+<div class="gift-scene"><div class="gift" id="gift" onclick="openGift()"><div class="gift-base"></div><div class="gift-ribbon"></div><div class="gift-lid"></div></div></div><button onclick="openGift()">Abrir nuestra cajita 💗</button>
+<section id="explosion" class="hidden"><h2>¡Todo esto es para ti! 💜</h2><div class="cross">
+<div class="flap top"><h3>📅 Nuestro día</h3><b>Octubre 2026</b><div class="calendar" id="calendar"></div><p>El día 6 comenzó nuestra historia 💗</p></div>
+<div class="flap left"><h3>🎟️ Un cupón</h3><div class="coupon"><b>CUPÓN DE AMOR</b><p>Vale por abrazos, paciencia y besitos virtuales.</p>💜💜💜</div></div>
+<div class="center"><div class="big-heart">💜</div><b>Mi corazón</b><p class="small">Para ti, amor.</p><button onclick="showLetter()">Abrir carta 💌</button></div>
+<div class="flap right"><h3>⏳ Nuestro tiempo</h3><div class="counter" id="counter">Contando...</div><p class="small">Desde el 6 de octubre de 2026 a las 3:56 p. m.</p></div>
+<div class="flap bottom"><h3>💗 Una promesa</h3><p>Que este sea solamente el primero de muchísimos meses juntos.</p>💕</div></div>
+<section id="letterSection" class="hidden"><h2>💌 Una carta para ti</h2><div class="letter-paper">Hoy amor ya cumplimos nuestro primer mes, y espero q sea el primero de muchos más, por q no quiero que esto acabe. En este tiempo q te he conocido y q soy tú novia me he sentido muy feliz, me encanta la forma en la q me tratas, en la q me das amor, en la q me entiendes. Nunca nadie me había tenido tanta paciencia como tú la tienes conmigo.
+
+Se q no soy la mejor novia, estoy intentando cambiar por tí, para ser mejor persona. Se q a veces la embarró, y la cago muy feo, y quizás pienses q no me importa lo q hago o en q te afecta.
+
+Hace mucho no sentía este amor como el que siento por tí, es sincero, y cada día te amo más. No me cansaría de amarte, por q sé q te mereces todo el amor q te puedo dar.
+
+Gracias por estar conmigo, y por quererme así como soy.
+
+Te amo mucho y feliz primer mes.
+
+DE: Bry
+PARA: Él amor de mi vida 🖤</div><p>Con todo mi amor, Bry 💜</p></section></section><p class="small">Hecho con amor por Bry, para Bladimir. 💜</p></main>
+<script>
+function enter(){if(document.getElementById('pin').value==='06102026'){document.getElementById('pinScreen').classList.add('hidden');document.getElementById('main').classList.remove('hidden');makeCalendar();updateCounter();setInterval(updateCounter,1000)}else document.getElementById('error').textContent='Clave incorrecta. Inténtalo otra vez 💜'}
+let opened=false;function openGift(){opened=!opened;document.getElementById('gift').classList.toggle('open',opened);document.getElementById('explosion').classList.toggle('hidden',!opened)}
+function showLetter(){document.getElementById('letterSection').classList.toggle('hidden')}
+function makeCalendar(){let c=document.getElementById('calendar');if(c.children.length)return;['L','M','X','J','V','S','D'].forEach(x=>{let s=document.createElement('span');s.textContent=x;c.appendChild(s)});for(let i=0;i<3;i++)c.appendChild(document.createElement('span'));for(let d=1;d<=31;d++){let s=document.createElement('span');s.textContent=d===6?'♥':d;if(d===6)s.className='mark';c.appendChild(s)}}
+function updateCounter(){let start=new Date('2026-10-06T15:56:00-05:00').getTime(),diff=Date.now()-start,e=document.getElementById('counter');if(diff<0){e.textContent='Nuestro comienzo se acerca 💜';return}let days=Math.floor(diff/86400000);diff%=86400000;let h=Math.floor(diff/3600000);diff%=3600000;let m=Math.floor(diff/60000);diff%=60000;let s=Math.floor(diff/1000);e.textContent=days+' días, '+h+' h, '+m+' min, '+s+' s'}
+</script></body></html>
